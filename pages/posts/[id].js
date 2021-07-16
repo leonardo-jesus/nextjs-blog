@@ -1,4 +1,4 @@
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getAllPostIds, getPostData } from '../../helpers/postsHelper'
 import Head from 'next/head'
 import Layout from '../../components/layout'
 import Date from '../../components/date'

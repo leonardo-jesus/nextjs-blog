@@ -37,7 +37,7 @@ export default function Home({ allPostsData }) {
   );
 }
 
-import { getSortedPostsData } from '../lib/posts';
+import { getSortedPostsData } from '../helpers/postsHelper';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
