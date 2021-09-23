@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
+import axios from 'axios'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -82,4 +83,16 @@ export async function getPostData(id) {
     contentHtml,
     ...matterResult.data
   }
+}
+
+export async function getBFFJson() {
+  const api = axios.create({
+    baseURL: 'http://localhost:3333',
+    timeout: 1000
+  });
+  // http://localhost:3333/projects
+
+  const projects = await api.get('/projects');
+
+  return projects;
 }
