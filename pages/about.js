@@ -5,7 +5,6 @@ import Date from '../components/date';
 import utilStyles from '../styles/utils.module.css';
 
 export default function About({ allRepositoriesData }) {
-  console.log()
   return (
     <Layout about>
       <Head>
